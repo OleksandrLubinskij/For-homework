@@ -12,10 +12,14 @@ while True:
     if a == 1:
         num = int(input('Enter number: '))
         number = num
-        print(number)
+        with open('save-to-file.txt', 'w', encoding='utf-8') as file:
+            file.write(f'The number you guessed - {str(number)}')
+        print(f'You set - {number}')
+
     elif a == 2:
         number = 0
         print(number)
+
     elif a == 3:
         print('Bye!')
         break
